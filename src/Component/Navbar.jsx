@@ -9,13 +9,11 @@ function Navbar() {
   const { cart } = useContext(CartContext) || { cart: [] };
 
   return (
-    <div className="  backdrop-blur-3xl shadow-xl sticky top-0 left-0 z-10">
+    <div className="  backdrop-blur-3xl shadow-xl z-10">
       <div className="flex mx-auto w-full max-w-[1440px] justify-between px-5 items-center py-4 text-white">
         <Link to={"/"} className="text-xl font-bold">
           <img className="w-[120px] lg:w-[170px]" src={WebLogo} alt="slapnest" />
         </Link>
-
-
 
         <div className=" gap-2 items-center text-2xl text-gray-500 lg:flex">
           
