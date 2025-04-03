@@ -1,0 +1,50 @@
+
+
+
+
+
+
+{
+    "products": [
+      {
+        "id": 1,
+        "title": "Ice Cream",
+        "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Ice%20Cream/thumbnail.png"
+     },
+      {
+        "id": 2,
+        "title": "Eyeshadow Palette with Mirror",
+        "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/thumbnail.png"
+      },
+      {
+        "id": 3,
+        "title": "Powder Canister",
+        "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/thumbnail.png"
+      },
+      {
+        "id": 4,
+        "title": "Dog Food",
+         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Dog%20Food/thumbnail.png"
+      },
+      {
+        "id": 5,
+        "title": "Red Nail Polish",
+        "thumbnail": "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Bed/thumbnail.png"     
+     },
+     {
+        "id": 6,
+        "title": "Red Lipstick",
+          "thumbnail": "https://cdn.dummyjson.com/products/images/furniture/Knoll%20Saarinen%20Executive%20Conference%20Chair/thumbnail.png"
+      },
+      {
+        "id": 7,
+        "title": "Cooking Oil",
+        "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Cooking%20Oil/thumbnail.png"
+      },
+      {
+        "id": 8,
+        "title": "Honey Jar",
+       "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Honey%20Jar/thumbnail.png"
+      }
+    ]
+}
