@@ -19,9 +19,9 @@ function Navbar() {
           
         <div className="hidden gap-8 items-center text-2xl text-gray-800 lg:flex">
           <Link className="hover:text-yellow-600 transition-all focus:text-amber-500 font-semibold" to={'/'}>Home</Link>
-          <Link className="hover:text-yellow-600 transition-all focus:text-amber-500 font-semibold" to={'/collection/all'}>Collection</Link>
-          <Link className="hover:text-yellow-600 transition-all focus:text-amber-500 font-semibold" to={'/about'}>About Us</Link>
-          <Link className="hover:text-yellow-600 transition-all focus:text-amber-500 font-semibold" to={'/contacts'}>Contacts</Link>
+          <Link className="hover:text-yellow-600 transition-all focus:text-amber-500 font-semibold" to={'collection'}>Collection</Link>
+          <Link className="hover:text-yellow-600 transition-all focus:text-amber-500 font-semibold" to={'about'}>About Us</Link>
+          <Link className="hover:text-yellow-600 transition-all focus:text-amber-500 font-semibold" to={'contacts'}>Contacts</Link>
 
       
         <Link

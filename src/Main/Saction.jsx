@@ -26,17 +26,17 @@ function Saction() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/card" element={<Card />} />
-        <Route path="/collection/all" element={<Collection />}>
+        <Route path="card" element={<Card />} />
+        <Route path="collection" element={<Collection />}>
         <Route path="winter" element={<Winter/>}/>
         <Route path="autumn" element={<Autumn/>}/>
         <Route path="summer" element={<Summer/>}/>
         <Route path="all" element={<MainCol/>}/>
         </Route>
-        <Route path="/about" element={<About />} />
-        <Route path="/contacts" element={<Contacts />} />
+        <Route path="about" element={<About />} />
+        <Route path="contacts" element={<Contacts />} />
         <Route path='product-catigori/:id' element={<Product/>}/>
-        <Route path='/products' element={<Products/>}/>
+        <Route path='products' element={<Products/>}/>
         <Route path='item/:id' element={<Item/>}/>
       </Routes>
       <Footer />

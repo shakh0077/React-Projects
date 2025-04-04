@@ -16,7 +16,7 @@ function Summer() {
       {product.summer.map((v) => (
         <Link  data-aos = 'fade-down'
           to={`/item/${v.id}`} 
-          className="transition-transform transform hover:scale-105 hover:text-red-600 w-full text-center" 
+          className="transition-transform transform w-[260px] lg:w-[300px] hover:scale-105 hover:text-red-600  text-center" 
           key={v.id}
         >
           <img
