@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Heart, Search } from "lucide-react";
 import KushImg2 from '../Seasons/imglar/KushImg2.jpg'
 import Winter2 from '../Seasons/imglar/Winter2.jpg'
@@ -36,6 +36,8 @@ import Summer7 from '../Seasons/imglar/Summer7.jpg'
 import Summer8 from '../Seasons/imglar/Summer8.jpg'
 import Summer9 from '../Seasons/imglar/Summer9.jpg'
 import Summer10 from '../Seasons/imglar/Summer10.jpg'
+import { useTranslation } from "react-i18next";
+import { CartContext } from "../Feature/ContextProvider";
 
 const categories = {
   all: [
@@ -117,6 +119,15 @@ const categories = {
 };
 
 export default function Collection() {
+  const { lang, setLang } = useContext(CartContext) || {
+    cart: [],
+    lang: "en",
+    setLang: () => {},
+  };
+
+  const { t } = useTranslation();
+
+
   const [favorites, setFavorites] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -147,7 +158,7 @@ export default function Collection() {
           />
         </div>
 
-        <h2 className="text-2xl font-bold mb-2 ">Colection</h2>
+        <h2 className="text-2xl font-bold mb-2 ">{t("collection")}</h2>
         <ul>
           {Object.keys(categories).map((category) => (
             <li
@@ -157,7 +168,7 @@ export default function Collection() {
               }`}
               onClick={() => setSelectedCategory(category)}
             >
-              {category.charAt(0).toUpperCase() + category.slice(1)} Collection
+              {category.charAt(0).toUpperCase() + category.slice(1)} {t("collection")}
             </li>
           ))}
         </ul>
@@ -177,7 +188,7 @@ export default function Collection() {
                 <span className="text-lg font-semibold">{product.name}</span>
                 <button onClick={() => toggleFavorite(product.name)}>
                   <Heart
-                    className={`w-6 absolute bottom-5 right-3 h-6 transition-colors ${
+                    className={`w-6 absolute bottom-5 cursor-pointer right-3 h-6 transition-colors ${
                       favorites.includes(product.name) ? "text-red-500" : "text-red-600   "
                     }`}
                     fill={favorites.includes(product.name) ? "red" : "none"}

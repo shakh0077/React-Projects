@@ -9,12 +9,11 @@ function Card() {
     const {cart} = useContext(CartContext)
     
   return (
-    <div >
-    <div className='w-full max-w-[1440px] pt-3 mx-auto relative'>
+    <div  className='h-[30vh]'>
+    <div className='w-full max-w-[1440px]  pt-3 mx-auto relative'>
         <div>
             {cart.map(p=>(
                 <CardProduct product={p}></CardProduct>
-
             ))}
         </div>
 

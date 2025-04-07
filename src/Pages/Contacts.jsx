@@ -1,30 +1,40 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import Mui from "../mui/Maps";
+import PhoneCan from "../App/Phone";
+import { useTranslation } from "react-i18next";
+import { CartContext } from "../Feature/ContextProvider";
 
 function Contacts() {
+  const [phoneNumber, setPhoneNumber] = useState('');
+
+    const { lang, setLang } = useContext(CartContext) || {
+      cart: [],
+      lang: "en",
+      setLang: () => {},
+    };
+  
+    const { t } = useTranslation();
   return (
     <>
       <div className="w-full mx-auto p-5 lg:max-w-[1440px]">
         <div className="flex items-center flex-col lg:flex-row gap-16">
           <div className="flex flex-col    gap-7 pt-10 lg:pt-20">
-            <h1 className="font-extrabold text-4xl pb-6">Contacts</h1>
+            <h1 className="font-extrabold text-4xl pb-6">{t("contacts.title")}</h1>
             <input
               type="email"
               className="w-[280px] px-5 py-5 text-xl rounded-3xl bg-gray-100 font-semibold lg:w-[550px]"
-              placeholder="Your email"
+              placeholder={t("contacts.yourEmail")}
             />
-            <input
-              type="number"
-              className="w-[280px] px-5 py-5 text-xl rounded-3xl bg-gray-100 font-semibold lg:w-[550px]"
-              placeholder="Your phone number"
-            />
+            <div className="p-4">
+              <PhoneCan value={phoneNumber} onChange={setPhoneNumber} />
+            </div>
             <textarea
               type="text"
               className="w-[280px] h-[150px] px-5 py-5 text-xl rounded-3xl bg-gray-100 font-semibold lg:w-[550px]"
-              placeholder="Write your message here"
+              placeholder={t("contacts.messagePlaceholder")}
             />
             <button className="px-8 py-2 text-xl bg-red-600 w-[150px]  text-white rounded-3xl font-bold lg:w-[300px] ">
-              Send
+            {t("contacts.send")}
             </button>
           </div>
           <div>
@@ -64,9 +74,9 @@ function Contacts() {
               <path d="M15.878 6.193a.94.94 0 0 0-.94.94c0 .512.428.94.94.94 1.016 0 1.888.872 1.888 1.888 0 .512.428.94.94.94s.94-.428.94-.94c0-2.048-1.72-3.768-3.768-3.768z" />
             </svg>
 
-            <h2 className="  text-base  lg:font-bold lg:text-xl">
+            <h2 className="  text-base  lg:whitespace-nowrap  lg:font-bold lg:text-xl">
               Тел: +998 94 033 72 12{" "}
-              <span className="text-base whitespace-nowrap  lg:font-bold lg:text-xl">+998 91 777 73 68</span>
+              <span className="text-base whitespace-nowrap pl-4  lg:font-bold lg:text-xl">+998 91 777 73 68</span>
             </h2>
           </div>
           <div className="flex gap-1.5 items-center">
@@ -91,7 +101,7 @@ function Contacts() {
               >
               </text>
             </svg>
-            <h2 className="text-base  lg:font-bold lg:text-xl">Bukhara, st. Alpomysh 80.</h2>
+            <h2 className="text-base whitespace-nowrap  lg:font-bold lg:text-xl">{t("contacts.address")}</h2>
           </div>
         </div>
       </div>

@@ -16,6 +16,25 @@ import Autumn from "../Seasons/Autumn.jsx";
 import Summer from "../Seasons/Summer.jsx";
 import MainCol from "../CollectionAll/MainCol.jsx";
 
+import TranslationUz from '../transition/TransitionUz.js'
+import TranslationRu from '../transition/TransitionRu.js'
+import TranslationEng from '../transition/TransitionEng.js'
+import { initReactI18next } from "react-i18next";
+import i18next from "i18next";
+
+
+
+i18next.use(initReactI18next).init({
+  resources:{
+    en:{translation:TranslationEng},
+    uz:{translation:TranslationUz},
+    ru:{translation:TranslationRu}
+  },
+  lng:'en',
+  fallbackLng:'en'
+})
+
+
 
 
 function Saction() {
@@ -23,8 +42,9 @@ function Saction() {
 
   return (
     <BrowserRouter>
-      <Navbar />
-      <Routes>
+    <div>
+    <Navbar />
+    <Routes>
         <Route path="/" element={<Home />} />
         <Route path="card" element={<Card />} />
         <Route path="collection" element={<Collection />}>
@@ -40,6 +60,7 @@ function Saction() {
         <Route path='item/:id' element={<Item/>}/>
       </Routes>
       <Footer />
+    </div>
     </BrowserRouter>
   );
 }
