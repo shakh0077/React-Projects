@@ -178,13 +178,13 @@ export default function Collection() {
       <div className="lg:w-3/4 w-full p-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredProducts.map((product) => (
-            <div key={product.name} className="relative  rounded-lg overflow-hidden shadow-md">
+            <div key={product.name} className="relative  rounded-xl overflow-hidden">
               <img
                 src={product.image}
                 alt={product.name}
                 className="w-full h-48 object-cover"
               />
-              <div className="p-4 flex justify-between items-center">
+              <div className="p-4 text-center">
                 <span className="text-lg font-semibold">{product.name}</span>
                 <button onClick={() => toggleFavorite(product.name)}>
                   <Heart
