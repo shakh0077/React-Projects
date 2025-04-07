@@ -188,7 +188,7 @@ export default function Collection() {
                 <span className="text-lg font-semibold">{product.name}</span>
                 <button onClick={() => toggleFavorite(product.name)}>
                   <Heart
-                    className={`w-6 absolute bottom-5 cursor-pointer right-3 h-6 transition-colors ${
+                    className={`w-8 absolute p-1 top-3 bg-gray-300 rounded-full  cursor-pointer right-3 h-8 transition-colors ${
                       favorites.includes(product.name) ? "text-red-500" : "text-red-600   "
                     }`}
                     fill={favorites.includes(product.name) ? "red" : "none"}

@@ -109,6 +109,30 @@ const TransilationEng = {
     phoneLabel: "Phone: +998 94 033 72 12 +998 91 777 73 68",
     address: "Bukhara, st. Alpomysh 80"
   }
+  ,
+  "product": {
+    "title": "French Riviera",
+    "material": "100% cotton flannel",
+    "pillowcase": "Pillowcase: 50x70 cm (2 pcs)",
+    "sheet": "Sheet: 260×280 cm (1 pc)",
+    "duvet": "Duvet Cover: 160x220 cm (2 pcs)",
+    "size": "Size: Custom Size",
+    "manufacturer": "Manufacturer: Eco-Friendly Sleep Products"
+  },
+  "comments": {
+    "title": "Submitted Comments",
+    "leaveComment": "Leave a Comment",
+    "rating": "Rating:",
+    "stars": ["1 Star", "2 Stars", "3 Stars", "4 Stars", "5 Stars"],
+    "empty": "Empty",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "comment": "Comment",
+    "commentPlaceholder": "Write your comment here...",
+    "submit": "Submit"
+  }
 
 }
 

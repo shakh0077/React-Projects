@@ -1,10 +1,22 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { product } from "../mock/data";
 import { Outlet, useParams } from "react-router-dom";
 import Raiting from "../CollectionAll/Raiting";
-import Smill from "../CollectionAll/Smill";
+import { CartContext } from "../Feature/ContextProvider";
+import { useTranslation } from "react-i18next";
+
 
 function Item() {
+
+  const { lang, setLang } = useContext(CartContext) || {
+    cart: [],
+    lang: "en",
+    setLang: () => {},
+  };
+
+  const { t } = useTranslation();
+
+
   const { id } = useParams();
   const [comments, setComments] = useState([]);
   const [name, setName] = useState("");
@@ -43,27 +55,27 @@ function Item() {
                 <tbody>
                   <tr className="border">
                     <td className="text-lg lg:text-2xl font-semibold px-5 py-4 border">Material:</td>
-                    <td className="text-sm lg:text-xl px-5 py-4 border">100% cotton flannel</td>
+                    <td className="text-sm lg:text-xl px-5 py-4 border">{t("product.material")}</td>
                   </tr>
                   <tr className="border">
                     <td className="text-lg lg:text-2xl font-semibold px-5 py-4 border">Pillowcase:</td>
-                    <td className="text-sm lg:text-xl px-5 py-4 border">50x70 cm (2 pcs)</td>
+                    <td className="text-sm lg:text-xl px-5 py-4 border">{t("product.pillowcase")}</td>
                   </tr>
                   <tr className="border">
                     <td className="text-lg lg:text-2xl font-semibold px-5 py-4 border">Sheet:</td>
-                    <td className="text-sm lg:text-xl px-5 py-4 border">260×280 cm (1 pc)</td>
+                    <td className="text-sm lg:text-xl px-5 py-4 border">{t("product.sheet")}</td>
                   </tr>
                   <tr className="border">
                     <td className="text-lg lg:text-2xl font-semibold px-5 py-4 border">Duvet Cover:</td>
-                    <td className="text-sm lg:text-xl px-5 py-4 border">160x220 cm (2 pcs)</td>
+                    <td className="text-sm lg:text-xl px-5 py-4 border">{t("product.duvet")}</td>
                   </tr>
                   <tr className="border">
                     <td className="text-lg lg:text-2xl font-semibold px-5 py-4 border">Size:</td>
-                    <td className="text-sm lg:text-xl px-5 py-4 border">Custom Size</td>
+                    <td className="text-sm lg:text-xl px-5 py-4 border">{t("product.size")}</td>
                   </tr>
                   <tr className="border">
                     <td className="text-lg lg:text-2xl font-semibold px-5 py-4 border">Manufacturer:</td>
-                    <td className="text-sm lg:text-xl px-5 py-4 border">Eco-Friendly Sleep Products</td>
+                    <td className="text-sm lg:text-xl px-5 py-4 border">{t("product.manufacturer")}</td>
                   </tr>
                 </tbody>
               </table>
@@ -76,7 +88,7 @@ function Item() {
         <div className="flex flex-col lg:flex-row gap-10 mt-10">
           <div className="w-full lg:w-1/2">
             <h2 className="text-2xl md:text-3xl py-5 font-bold">
-              Submitted Comments
+            {t("comments.title")}
             </h2>
             <ul className="space-y-4">
               {comments.map((c, index) => (
@@ -92,59 +104,60 @@ function Item() {
 
           <div className="w-full lg:w-1/2 px-0 lg:px-5">
             <h2 className="text-2xl md:text-3xl py-5 font-bold text-center">
-              Leave a Comment
+            {t("comments.leaveComment")}
             </h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="text-gray-500 text-xl font-semibold" htmlFor="raiting">
-                  Rating:
+                {t("comments.rating")}
                 </label>
                 <Raiting />
               </div>
 
               <div className="flex flex-col gap-2">
                 <label className="text-gray-500 text-xl font-semibold" htmlFor="name">
-                  Name
+                {t("comments.name")}
+
                 </label>
                 <input
                   className="bg-gray-200 px-4 py-3 font-semibold text-xl rounded-3xl w-full"
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder="Your name"
+                  placeholder={t("comments.namePlaceholder")}
                 />
               </div>
 
               <div className="flex flex-col gap-2">
                 <label className="text-gray-500 text-xl font-semibold" htmlFor="email">
-                  Email
+                {t("comments.email")}
                 </label>
                 <input
                   className="bg-gray-200 px-4 py-3 font-semibold text-xl rounded-3xl w-full"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="your@email.com"
+                  placeholder={t("comments.emailPlaceholder")}
                 />
               </div>
 
               <div className="flex flex-col gap-2">
                 <label className="text-gray-500 text-xl font-semibold" htmlFor="commit">
-                  Comment
+                {t("comments.comment")}
                 </label>
                 <textarea
                   className="bg-gray-200 px-4 py-3 font-semibold text-xl h-32 rounded-3xl w-full resize-none"
                   value={comment}
                   onChange={(e) => setComment(e.target.value)}
-                  placeholder="Write your comment here..."
+                  placeholder={t("comments.commentPlaceholder")}
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="bg-red-500 mt-5 py-3.5 w-full text-white text-lg font-semibold rounded-3xl transition hover:bg-red-600"
+                className="bg-red-500 mt-5 cursor-pointer py-3.5 w-full text-white text-lg font-semibold rounded-3xl transition hover:bg-red-600"
               >
-                Submit
+                {t("comments.submit")}
               </button>
             </form>
           </div>

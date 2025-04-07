@@ -40,7 +40,7 @@ function Footer() {
         <div className='w-[290px]  relative flex flex-col gap-3 lg:w-[380px]'>
           <h1 className='text-2xl font-extrabold text-gray-800'>{t("footer.inputPlaceholder")}</h1>
           <input type="text" placeholder='Email' className='pl-4 py-3 w-[300px] text-xl border rounded-xl lg:w-[340px]' />
-          <button className='text-xs bg-red-500 rounded text-white px-3 py-2 absolute top-14 right-0 lg:top-13.5 lg:right-9'>{t("footer.submit")}</button>
+          <button className='text-xs cursor-pointer bg-red-500 rounded text-white px-3 py-2 absolute top-14 right-0 lg:top-13.5 lg:right-9'>{t("footer.submit")}</button>
           <h2 className='text-base font-medium text-gray-700'>{t("footer.selectWarning")}</h2>
         </div>
       </div>

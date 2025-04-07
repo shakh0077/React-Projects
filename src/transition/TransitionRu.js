@@ -110,6 +110,31 @@ const TransilationRu = {
     emailLabel: "Email: sleepnest@gmail.com",
     phoneLabel: "Тел: +998 94 033 72 12 +998 91 777 73 68",
     address: "Бухара, ул. Алпомыш 80"
+  },
+
+
+  "product": {
+    "title": "French Riviera",
+    "material": "Фланель из 100% хлопка",
+    "pillowcase": "Наволочки: 50x70 см (2 шт.)",
+    "sheet": "Простыня: 260×280 см (1 шт.)",
+    "duvet": "Пододеяльник: 160x220 см (2 шт.)",
+    "size": "Размер: Индивидуальный",
+    "manufacturer": "Производитель: Экологически чистые товары для сна"
+  },
+  "comments": {
+    "title": "Оставленные комментарии",
+    "leaveComment": "Оставить комментарий",
+    "rating": "Оценка:",
+    "stars": ["1 звезда", "2 звезды", "3 звезды", "4 звезды", "5 звезд"],
+    "empty": "Пусто",
+    "name": "Имя",
+    "namePlaceholder": "Ваше имя",
+    "email": "Электронная почта",
+    "emailPlaceholder": "ваш@почта.ком",
+    "comment": "Комментарий",
+    "commentPlaceholder": "Напишите ваш комментарий здесь...",
+    "submit": "Отправить"
   }
 };
 

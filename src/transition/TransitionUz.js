@@ -109,6 +109,29 @@ const TransilationUz = {
     emailLabel: "Email: sleepnest@gmail.com",
     phoneLabel: "Tel: +998 94 033 72 12 +998 91 777 73 68",
     address: "Buxoro, Alpomysh ko‘chasi 80-uy"
+  },
+  "product": {
+    "title": "French Riviera",
+    "material": "100% paxta flanelli",
+    "pillowcase": "Yostiq jildlari: 50x70 sm (2 dona)",
+    "sheet": "Prostina: 260×280 sm (1 dona)",
+    "duvet": "Adyol jildi: 160x220 sm (2 dona)",
+    "size": "O‘lcham: Buyurtma asosida",
+    "manufacturer": "Ishlab chiqaruvchi: Ekologik toza uyqu mahsulotlari"
+  },
+  "comments": {
+    "title": "Qoldirilgan izohlar",
+    "leaveComment": "Izoh qoldiring",
+    "rating": "Baholash:",
+    "stars": ["1 yulduz", "2 yulduz", "3 yulduz", "4 yulduz", "5 yulduz"],
+    "empty": "Bo‘sh",
+    "name": "Ism",
+    "namePlaceholder": "Ismingiz",
+    "email": "Email",
+    "emailPlaceholder": "emailingiz@example.com",
+    "comment": "Izoh",
+    "commentPlaceholder": "Izohingizni shu yerga yozing...",
+    "submit": "Yuborish"
   }
 };
 

@@ -20,7 +20,7 @@ function Navbar() {
   }, [lang, i18n]);
 
   return (
-    <div className="backdrop-blur-3xl shadow-xl z-10">
+    <div className="sticky top-0 backdrop-blur-3xl shadow-xl z-50">
       <div className="flex mx-auto w-full max-w-[1440px] justify-between px-5 items-center py-4 text-white">
         <Link to={"/"} className="text-xl font-bold">
           <img className="w-[120px] lg:w-[170px]" src={WebLogo} alt="sleepnest" />
@@ -28,16 +28,16 @@ function Navbar() {
 
         <div className="gap-2 items-center text-2xl text-gray-500 lg:flex">
           <div className="hidden gap-8 items-center text-2xl text-gray-800 lg:flex">
-            <Link className="hover:text-yellow-600 transition-all font-semibold" to={"/"}>
+            <Link className="hover:text-yellow-600 focus:text-yellow-600 transition-all font-semibold" to={"/"}>
               {t("navigation.home")}
             </Link>
-            <Link className="hover:text-yellow-600 transition-all font-semibold" to={"/collection"}>
+            <Link className="hover:text-yellow-600 focus:text-yellow-600 transition-all font-semibold" to={"/collection"}>
               {t("navigation.collection")}
             </Link>
-            <Link className="hover:text-yellow-600 transition-all font-semibold" to={"/about"}>
+            <Link className="hover:text-yellow-600 focus:text-yellow-600 transition-all font-semibold" to={"/about"}>
               {t("navigation.about")}
             </Link>
-            <Link className="hover:text-yellow-600 transition-all font-semibold" to={"/contacts"}>
+            <Link className="hover:text-yellow-600 focus:text-yellow-600 transition-all font-semibold" to={"/contacts"}>
               {t("navigation.contact")}
             </Link>
 
@@ -53,17 +53,17 @@ function Navbar() {
 
           <div className="flex flex-row ml-4">
           <select
-              className="bg-orange-600  text-gray-200 px-1 w-15 text-xs lg:h-10  lg:text-base outline-0 rounded"
+              className="bg-orange-600  text-gray-200 px-1 w-15 text-xs lg:h-10  lg:text-base outline-0 rounded-3xl"
               value={lang}
               onChange={(e) => setLang(e.target.value)}
             >
-              <option className="text-black" value="en">
+              <option className="text-gray-200" value="en">
                 Eng
               </option>
-              <option className="text-black" value="uz">
+              <option className="text-gray-200" value="uz">
                 O'z
               </option>
-              <option className="text-black" value="ru">
+              <option className="text-gray-200" value="ru">
                 Ru
               </option>
             </select>

@@ -43,7 +43,7 @@ function Saction() {
   return (
     <BrowserRouter>
     <div>
-    <Navbar />
+    <Navbar  />
     <Routes>
         <Route path="/" element={<Home />} />
         <Route path="card" element={<Card />} />
