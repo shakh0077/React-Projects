@@ -53,7 +53,7 @@ function Navbar() {
 
           <div className="flex flex-row ml-4">
           <select
-              className="bg-orange-600  text-gray-200 px-1 w-15 text-xs lg:h-10  lg:text-base outline-0 rounded-3xl"
+              className="bg-orange-600 cursor-pointer  text-gray-200 px-1 w-15 text-xs lg:h-10  lg:text-base outline-0 rounded-3xl"
               value={lang}
               onChange={(e) => setLang(e.target.value)}
             >
