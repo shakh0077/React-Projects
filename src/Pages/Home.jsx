@@ -45,7 +45,7 @@ function Home() {
     <>
     <div className='p-5 mx-auto w-full lg:max-w-[1440px]'>
       <div className='  relative  h-[350px] bg-gradient-to-r from-orange-400 to-orange-100 rounded-4xl hover:shadow-[0px_0px_30px_1px_orange] transition duration-300 lg:h-[650px]' >
-        <img data-aos='fade-down' src={HomeImg} className='w-[500px] h-[400px] lg:w-[1000px] lg:h-[800px] object-cover' alt="rams" />
+        <img data-aos='fade-down' src={HomeImg} width="500" height="300" loading="lazy" className='w-[500px] h-[400px] lg:w-[1000px] lg:h-[800px] object-cover' alt="rams" />
         <div data-aos='fade-left' className='text-end absolute top-10 right-5 lg:right-9 lg:top-22'>
           <h3 style={{color:'rgb(199, 200, 65)'}} className='text-xl font-bold lg:text-3xl'>{t("hero.eco")}</h3>
           <h2 style={{color:'rgb(199, 210, 65)'}} className='text-2xl font-bold pt-5 lg:text-5xl'>{t("hero.clean")}</h2>
